@@ -97,6 +97,12 @@ sources:
     url: "https://www.mochov.cz/obecni-urad/uredni-deska-1/?kshow=4"
     category: "neighbor"
 
+  - id: "celakovice"
+    name: "Město Čelákovice"
+    type: "generic_html"
+    url: "https://www.celakovice.cz/cs/samosprava/uredni-deska/"
+    category: "neighbor"
+
   - id: "cenia_eia"
     name: "Informační systém EIA/SEA (CENIA)"
     type: "eia"
