@@ -13,6 +13,17 @@ def test_load_config():
     assert cfg.notifications.email.recipient == "romanxdolezal@seznam.cz"
     assert len(cfg.sources) >= 10
 
+def test_load_config_includes_celakovice():
+    cfg_path = Path(__file__).parent.parent / "config.yaml"
+    cfg = load_config(str(cfg_path))
+    ids = [s.id for s in cfg.sources]
+    assert "celakovice" in ids
+    celakovice = next(s for s in cfg.sources if s.id == "celakovice")
+    assert celakovice.name == "Město Čelákovice"
+    assert celakovice.type == "generic_html"
+    assert celakovice.url == "https://www.celakovice.cz/cs/samosprava/uredni-deska/"
+    assert celakovice.category == "neighbor"
+
 def test_db_initialization(tmp_path):
     db_path = tmp_path / "test_watchdog.db"
     db = Database(str(db_path))
