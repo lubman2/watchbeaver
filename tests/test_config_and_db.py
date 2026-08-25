@@ -11,7 +11,8 @@ def test_load_config():
     assert len(cfg.keywords) > 0
     assert "792756" in cfg.keywords
     assert cfg.notifications.email.recipient == "romanxdolezal@seznam.cz"
-    assert len(cfg.sources) >= 10
+    assert len(cfg.sources) >= 17
+    assert {"celakovice", "lazne_tousen", "praha14"} <= {s.id for s in cfg.sources}
 
 def test_load_config_includes_celakovice():
     cfg_path = Path(__file__).parent.parent / "config.yaml"
@@ -34,6 +35,17 @@ def test_load_config_includes_lazne_tousen():
     assert lazne_tousen.type == "galileo"
     assert lazne_tousen.url == "https://www.laznetousen.cz/obecni-urad/uredni-deska/"
     assert lazne_tousen.category == "neighbor"
+
+def test_load_config_includes_praha14():
+    cfg_path = Path(__file__).parent.parent / "config.yaml"
+    cfg = load_config(str(cfg_path))
+    ids = [s.id for s in cfg.sources]
+    assert "praha14" in ids
+    praha14 = next(s for s in cfg.sources if s.id == "praha14")
+    assert praha14.name == "MČ Praha 14"
+    assert praha14.type == "generic_html"
+    assert praha14.url == "https://www.praha14.cz/uredni-deska/"
+    assert praha14.category == "praha"
 
 def test_db_initialization(tmp_path):
     db_path = tmp_path / "test_watchdog.db"
