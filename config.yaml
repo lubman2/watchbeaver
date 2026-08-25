@@ -109,6 +109,12 @@ sources:
     url: "https://www.laznetousen.cz/obecni-urad/uredni-deska/"
     category: "neighbor"
 
+  - id: "praha14"
+    name: "MČ Praha 14"
+    type: "generic_html"
+    url: "https://www.praha14.cz/uredni-deska/"
+    category: "praha"
+
   - id: "cenia_eia"
     name: "Informační systém EIA/SEA (CENIA)"
     type: "eia"
