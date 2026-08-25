@@ -103,6 +103,12 @@ sources:
     url: "https://www.celakovice.cz/cs/samosprava/uredni-deska/"
     category: "neighbor"
 
+  - id: "lazne_tousen"
+    name: "Městys Lázně Toušeň"
+    type: "galileo"
+    url: "https://www.laznetousen.cz/obecni-urad/uredni-deska/"
+    category: "neighbor"
+
   - id: "cenia_eia"
     name: "Informační systém EIA/SEA (CENIA)"
     type: "eia"
