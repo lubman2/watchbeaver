@@ -1,0 +1,56 @@
+name: WatchBeaver Cron Scanner
+
+on:
+  schedule:
+    # Běží každé 2 hodiny (v minutě 15)
+    - cron: '15 */2 * * *'
+  workflow_dispatch: # Možnost spustit ručně z GitHub rozhraní
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install system dependencies (Poppler & Tesseract OCR)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils tesseract-ocr tesseract-ocr-ces
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pypdf requests pyyaml pytesseract pdf2image beautifulsoup4 lxml pytest
+
+      - name: Run WatchBeaver Scanner
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          SMTP_HOST: smtp.gmail.com
+          SMTP_PORT: 587
+        run: |
+          python scripts/run_watchdog.py --verbose
+
+      - name: Commit and push updated web data
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add web/public/data.json data/watchdog.db || true
+          if git diff --staged --quiet; then
+            echo "No changes in data.json"
+          else
+            git commit -m "chore(data): auto-update board findings [skip ci]"
+            git push
+          fi

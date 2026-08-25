@@ -11,11 +11,9 @@ env/
 venv/
 ENV/
 
-# Local data & logs (do not commit actual operational SQLite databases)
-data/*.db
+# Local data & logs
 data/*.log
-data/*.db-wal
-data/*.db-shm
+
 
 # macOS
 .DS_Store
