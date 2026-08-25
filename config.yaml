@@ -1,0 +1,104 @@
+# Konfigurace WatchBeaver — Watchdog úředních desek (Zeleneč & okolí)
+
+keywords:
+  - '(?i)\bzeleneč\w*'
+  - '(?i)\bzelenec\w*'
+  - '(?i)\bmstětic\w*'
+  - '(?i)\bmstetic\w*'
+  - '792756' # Kód k.ú. Zeleneč
+
+notifications:
+  telegram:
+    enabled: true
+  email:
+    enabled: true
+    recipient: "romanxdolezal@seznam.cz"
+    cc: ["lubos.soustruznik@myflow.cz"]
+    sender_name: "Klára virtuální asistentka Luboše S."
+    sender_email: "klara.superzelva@gmail.com"
+
+# Seznam sledovaných úřadů a institucí
+sources:
+  - id: "brandys_orp"
+    name: "MěÚ Brandýs nad Labem-Stará Boleslav (ORP)"
+    type: "generic_html"
+    url: "https://brandysko.cz/vismo/zobraz_dok.asp?p1=1110&id_org=904&ud=1"
+    category: "orp"
+
+  - id: "ricany_orp"
+    name: "MěÚ Říčany (ORP)"
+    type: "generic_html"
+    url: "https://www.ricany.cz/radnice/uredni-deska/"
+    category: "orp"
+
+  - id: "kusk"
+    name: "Krajský úřad Středočeského kraje (KÚSK)"
+    type: "generic_html"
+    url: "https://stredoceskykraj.cz/web/urad/uredni-deska"
+    category: "kraj"
+
+  - id: "praha20"
+    name: "MČ Praha 20 (Horní Počernice)"
+    type: "generic_html"
+    url: "https://www.pocernice.cz/uredni-deska/"
+    category: "praha"
+
+  - id: "jirny"
+    name: "Obec Jirny"
+    type: "galileo"
+    url: "https://www.jirny.cz/obecni-urad/uredni-deska/"
+    category: "neighbor"
+
+  - id: "sestajovice"
+    name: "Obec Šestajovice"
+    type: "generic_html"
+    url: "https://www.sestajovice.cz/urad/uredni-deska"
+    category: "neighbor"
+
+  - id: "nehvizdy"
+    name: "Městys Nehvizdy"
+    type: "galileo"
+    url: "https://www.nehvizdy.cz/urad/uredni-deska/"
+    category: "neighbor"
+
+  - id: "horousany"
+    name: "Obec Horoušany"
+    type: "galileo"
+    url: "https://www.horousany.cz/seniori/urad/uredni-deska/"
+    category: "neighbor"
+
+  - id: "radonice"
+    name: "Obec Radonice"
+    type: "generic_html"
+    url: "https://www.radonice.cz/urad-obce/uredni-deska/"
+    category: "neighbor"
+
+  - id: "svemyslice"
+    name: "Obec Svémyslice"
+    type: "galileo"
+    url: "https://www.svemyslice.cz/obec/uredni-deska/"
+    category: "neighbor"
+
+  - id: "zapy"
+    name: "Městys Zápy"
+    type: "galileo"
+    url: "https://www.zapy.cz/obecni-urad/uredni-deska/"
+    category: "neighbor"
+
+  - id: "jenstejn"
+    name: "Obec Jenštejn"
+    type: "galileo"
+    url: "https://www.jenstejn.cz/obecni-urad/uredni-deska/"
+    category: "neighbor"
+
+  - id: "mochov"
+    name: "Obec Mochov"
+    type: "galileo"
+    url: "https://www.mochov.cz/obecni-urad/uredni-deska-1/?kshow=4"
+    category: "neighbor"
+
+  - id: "cenia_eia"
+    name: "Informační systém EIA/SEA (CENIA)"
+    type: "eia"
+    url: "https://portal.cenia.cz/eiasea/view/eia100_cr"
+    category: "state"

@@ -1,0 +1,196 @@
+{
+  "updated_at": "2026-08-25T16:20:48.134050",
+  "stats": {
+    "total_sources": 14,
+    "total_notices": 734,
+    "total_attachments": 28,
+    "total_matches": 3
+  },
+  "sources": [
+    {
+      "id": "brandys_orp",
+      "name": "MěÚ Brandýs nad Labem-Stará Boleslav (ORP)",
+      "type": "generic_html",
+      "url": "https://brandysko.cz/vismo/zobraz_dok.asp?p1=1110&id_org=904&ud=1",
+      "ofn_url": null,
+      "category": "orp",
+      "last_checked_at": "2026-08-25T16:17:49.072060"
+    },
+    {
+      "id": "ricany_orp",
+      "name": "MěÚ Říčany (ORP)",
+      "type": "generic_html",
+      "url": "https://www.ricany.cz/radnice/uredni-deska/",
+      "ofn_url": null,
+      "category": "orp",
+      "last_checked_at": "2026-08-25T16:17:49.181196"
+    },
+    {
+      "id": "kusk",
+      "name": "Krajský úřad Středočeského kraje (KÚSK)",
+      "type": "generic_html",
+      "url": "https://stredoceskykraj.cz/web/urad/uredni-deska",
+      "ofn_url": null,
+      "category": "kraj",
+      "last_checked_at": "2026-08-25T16:17:49.301920"
+    },
+    {
+      "id": "praha20",
+      "name": "MČ Praha 20 (Horní Počernice)",
+      "type": "generic_html",
+      "url": "https://www.pocernice.cz/uredni-deska/",
+      "ofn_url": null,
+      "category": "praha",
+      "last_checked_at": "2026-08-25T16:17:50.495027"
+    },
+    {
+      "id": "jirny",
+      "name": "Obec Jirny",
+      "type": "galileo",
+      "url": "https://www.jirny.cz/obecni-urad/uredni-deska/",
+      "ofn_url": null,
+      "category": "neighbor",
+      "last_checked_at": "2026-08-25T16:17:51.271012"
+    },
+    {
+      "id": "sestajovice",
+      "name": "Obec Šestajovice",
+      "type": "generic_html",
+      "url": "https://www.sestajovice.cz/urad/uredni-deska",
+      "ofn_url": null,
+      "category": "neighbor",
+      "last_checked_at": "2026-08-25T16:17:51.640887"
+    },
+    {
+      "id": "nehvizdy",
+      "name": "Městys Nehvizdy",
+      "type": "galileo",
+      "url": "https://www.nehvizdy.cz/urad/uredni-deska/",
+      "ofn_url": null,
+      "category": "neighbor",
+      "last_checked_at": "2026-08-25T16:17:52.023207"
+    },
+    {
+      "id": "horousany",
+      "name": "Obec Horoušany",
+      "type": "galileo",
+      "url": "https://www.horousany.cz/seniori/urad/uredni-deska/",
+      "ofn_url": null,
+      "category": "neighbor",
+      "last_checked_at": "2026-08-25T16:17:52.356857"
+    },
+    {
+      "id": "radonice",
+      "name": "Obec Radonice",
+      "type": "generic_html",
+      "url": "https://www.radonice.cz/urad-obce/uredni-deska/",
+      "ofn_url": null,
+      "category": "neighbor",
+      "last_checked_at": "2026-08-25T16:17:53.896659"
+    },
+    {
+      "id": "svemyslice",
+      "name": "Obec Svémyslice",
+      "type": "galileo",
+      "url": "https://www.svemyslice.cz/obec/uredni-deska/",
+      "ofn_url": null,
+      "category": "neighbor",
+      "last_checked_at": "2026-08-25T16:17:54.043623"
+    },
+    {
+      "id": "zapy",
+      "name": "Městys Zápy",
+      "type": "galileo",
+      "url": "https://www.zapy.cz/obecni-urad/uredni-deska/",
+      "ofn_url": null,
+      "category": "neighbor",
+      "last_checked_at": "2026-08-25T16:17:54.306762"
+    },
+    {
+      "id": "jenstejn",
+      "name": "Obec Jenštejn",
+      "type": "galileo",
+      "url": "https://www.jenstejn.cz/obecni-urad/uredni-deska/",
+      "ofn_url": null,
+      "category": "neighbor",
+      "last_checked_at": "2026-08-25T16:17:55.050493"
+    },
+    {
+      "id": "mochov",
+      "name": "Obec Mochov",
+      "type": "galileo",
+      "url": "https://www.mochov.cz/obecni-urad/uredni-deska-1/?kshow=4",
+      "ofn_url": null,
+      "category": "neighbor",
+      "last_checked_at": "2026-08-25T16:17:55.351111"
+    },
+    {
+      "id": "cenia_eia",
+      "name": "Informační systém EIA/SEA (CENIA)",
+      "type": "eia",
+      "url": "https://portal.cenia.cz/eiasea/view/eia100_cr",
+      "ofn_url": null,
+      "category": "state",
+      "last_checked_at": "2026-08-25T16:17:55.650426"
+    }
+  ],
+  "matches": [
+    {
+      "id": 3,
+      "keyword": "Zeleneč",
+      "snippet": "...nice.  X. Změnou č.1 je vymezena plocha pro realizaci trvalého sběrnéh o dvora u kruhového  objezdu na severu sídla podél komunikace II/611 směrem na Zeleneč.  E.2 KONCEPCE OCHRANY PŘÍRODY  I. Na katastrálním území je nav ržen systém ÚSES včetně interakč ních prvků ÚSES – viz  schéma. Tyto plochy řeší návr...",
+      "source_context": "attachment",
+      "created_at": "2026-08-25 16:16:04",
+      "notified_telegram": 1,
+      "notified_email": 1,
+      "notice_id": 278,
+      "notice_title": "TEXTOVÁ ČÁST - Úplné znění po vydání změny č.1 a 2 územního plánu Šestajovice(PDF, 496 kB)",
+      "notice_url": "https://www.sestajovice.cz/www/files/texts/textova-cast-uplne-zneni-po-vydani-zmeny-c-1-a-2-uzemniho-planu-sestajovice.pdf",
+      "posted_at": null,
+      "source_id": "sestajovice",
+      "source_name": "Obec Šestajovice",
+      "source_category": "neighbor",
+      "attachment_filename": "TEXTOVÁ ČÁST - Úplné znění po vydání změny č.1 a 2 územního plánu Šestajovice(PDF, 496 kB).pdf",
+      "attachment_url": "https://www.sestajovice.cz/www/files/texts/textova-cast-uplne-zneni-po-vydani-zmeny-c-1-a-2-uzemniho-planu-sestajovice.pdf",
+      "ocr_applied": 0
+    },
+    {
+      "id": 2,
+      "keyword": "Zeleneč",
+      "snippet": "...ede plánovaná VRT. Jednalo se o část  tratě od okraje metropole až po okolí Nehvizd. Jednání  se účastnili zástupci MČ Klánovice a obcí Šestajovice,  Zeleneč, Jirny, Nehvizdy a Vykáň. Za naší obce se jed- nání účastnil místostarosta obce. V první části jednání zástupci Správy železnic ostatní  účastníky je...",
+      "source_context": "attachment",
+      "created_at": "2026-08-25 16:16:03",
+      "notified_telegram": 1,
+      "notified_email": 1,
+      "notice_id": 276,
+      "notice_title": "Dostavník 2026-07(PDF, 5 MB)",
+      "notice_url": "https://www.sestajovice.cz/www/files/texts/dostavnik-2026-07.pdf",
+      "posted_at": null,
+      "source_id": "sestajovice",
+      "source_name": "Obec Šestajovice",
+      "source_category": "neighbor",
+      "attachment_filename": "Dostavník 2026-07(PDF, 5 MB).pdf",
+      "attachment_url": "https://www.sestajovice.cz/www/files/texts/dostavnik-2026-07.pdf",
+      "ocr_applied": 0
+    },
+    {
+      "id": 1,
+      "keyword": "Zeleneč",
+      "snippet": "...Společné rozhodnutí o dělení a scelování pozemků parc.č. 254/38 - Nový Zeleneč a.s. Společné rozhodnutí o dělení a scelování pozemků parc.č. 254/38 - Nový Zeleneč a.s. 1132/26/OUJ Rozhodnutí Krajský úřad Středoč. 18.08.2026 02.0...",
+      "source_context": "notice_title",
+      "created_at": "2026-08-25 16:15:59",
+      "notified_telegram": 1,
+      "notified_email": 1,
+      "notice_id": 231,
+      "notice_title": "Společné rozhodnutí o dělení a scelování pozemků parc.č. 254/38 - Nový Zeleneč a.s.",
+      "notice_url": "https://www.jirny.cz/edeska/detail?id=3985",
+      "posted_at": null,
+      "source_id": "jirny",
+      "source_name": "Obec Jirny",
+      "source_category": "neighbor",
+      "attachment_filename": null,
+      "attachment_url": null,
+      "ocr_applied": null
+    }
+  ]
+}

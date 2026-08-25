@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / URL
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Local data & logs (do not commit actual operational SQLite databases)
+data/*.db
+data/*.log
+data/*.db-wal
+data/*.db-shm
+
+# macOS
+.DS_Store
+
+# Secrets & Environment configs
+.env
+credentials/
+
+# IDE
+.idea/
+.vscode/
