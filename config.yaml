@@ -12,7 +12,9 @@ notifications:
     enabled: true
   email:
     enabled: true
-    recipient: "romanxdolezal@seznam.cz"
+    recipients:
+      - "romanxdolezal@seznam.cz"
+      - "osickoviht@seznam.cz"
     cc: ["lubos.soustruznik@myflow.cz"]
     sender_name: "Klára virtuální asistentka Luboše S."
     sender_email: "klara.superzelva@gmail.com"

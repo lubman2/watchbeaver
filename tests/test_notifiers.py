@@ -3,7 +3,7 @@ from src.notifiers.mailer import EmailNotifier
 
 def test_email_message_structure():
     mailer = EmailNotifier(
-        recipient="romanxdolezal@seznam.cz",
+        recipients=["romanxdolezal@seznam.cz", "osickoviht@seznam.cz"],
         cc=["lubos.soustruznik@myflow.cz"]
     )
     
@@ -16,7 +16,7 @@ def test_email_message_structure():
         attachments=[("rozhodnuti.pdf", b"%PDF-dummy")]
     )
     
-    assert msg["To"] == "romanxdolezal@seznam.cz"
+    assert msg["To"] == "romanxdolezal@seznam.cz, osickoviht@seznam.cz"
     assert "lubos.soustruznik@myflow.cz" in msg["Cc"]
     assert "Klára" in msg["From"]
     assert "Zeleneč" in msg["Subject"]

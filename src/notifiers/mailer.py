@@ -10,16 +10,16 @@ logger = logging.getLogger(__name__)
 
 class EmailNotifier:
     """
-    Odesílá detailní notifikaci s přílohami Romanu Doležalovi od Kláry.
+    Odesílá detailní notifikaci s přílohami Romanu Doležalovi a Osičkovým od Kláry.
     Odesílatel: Klára virtuální asistentka Luboše S. <klara.superzelva@gmail.com>
-    Příjemce: romanxdolezal@seznam.cz
+    Příjemci: romanxdolezal@seznam.cz, osickoviht@seznam.cz
     Kopie: lubos.soustruznik@myflow.cz
     """
     def __init__(
         self,
         sender_name: str = "Klára virtuální asistentka Luboše S.",
         sender_email: str = "klara.superzelva@gmail.com",
-        recipient: str = "romanxdolezal@seznam.cz",
+        recipients: Optional[List[str]] = None,
         cc: Optional[List[str]] = None,
         smtp_host: Optional[str] = None,
         smtp_port: int = 587,
@@ -28,7 +28,7 @@ class EmailNotifier:
     ):
         self.sender_name = sender_name
         self.sender_email = sender_email
-        self.recipient = recipient
+        self.recipients = recipients or ["romanxdolezal@seznam.cz"]
         self.cc = cc or ["lubos.soustruznik@myflow.cz"]
         self.smtp_host = smtp_host or os.getenv("SMTP_HOST", "smtp.gmail.com")
         self.smtp_port = int(os.getenv("SMTP_PORT", smtp_port))
@@ -57,7 +57,7 @@ class EmailNotifier:
     ) -> MIMEMultipart:
         msg = MIMEMultipart()
         msg["From"] = f"{self.sender_name} <{self.sender_email}>"
-        msg["To"] = self.recipient
+        msg["To"] = ", ".join(self.recipients)
         if self.cc:
             msg["Cc"] = ", ".join(self.cc)
         msg["Subject"] = f"🦫 WatchBeaver ({source_name}): Zmínka k.ú. Zeleneč — {notice_title[:60]}"
@@ -103,7 +103,7 @@ class EmailNotifier:
             return False
 
         msg = self.build_message(source_name, notice_title, notice_url, keyword, snippet, attachments)
-        recipients = [self.recipient] + self.cc
+        recipients = self.recipients + self.cc
 
         try:
             with smtplib.SMTP(self.smtp_host, self.smtp_port, timeout=30) as server:

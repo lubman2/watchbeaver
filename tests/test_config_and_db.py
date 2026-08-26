@@ -10,7 +10,7 @@ def test_load_config():
     assert isinstance(cfg, Config)
     assert len(cfg.keywords) > 0
     assert "792756" in cfg.keywords
-    assert cfg.notifications.email.recipient == "romanxdolezal@seznam.cz"
+    assert cfg.notifications.email.recipients == ["romanxdolezal@seznam.cz", "osickoviht@seznam.cz"]
     assert len(cfg.sources) >= 17
     assert {"celakovice", "lazne_tousen", "praha14"} <= {s.id for s in cfg.sources}
 
