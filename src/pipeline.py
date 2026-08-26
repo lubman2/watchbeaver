@@ -31,7 +31,7 @@ class WatchdogPipeline:
         self.mailer = EmailNotifier(
             sender_name=config.notifications.email.sender_name,
             sender_email=config.notifications.email.sender_email,
-            recipient=config.notifications.email.recipient,
+            recipients=config.notifications.email.recipients,
             cc=config.notifications.email.cc
         )
 

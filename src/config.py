@@ -12,7 +12,7 @@ class TelegramConfig:
 @dataclass
 class EmailConfig:
     enabled: bool = True
-    recipient: str = "romanxdolezal@seznam.cz"
+    recipients: List[str] = field(default_factory=lambda: ["romanxdolezal@seznam.cz"])
     cc: List[str] = field(default_factory=lambda: ["lubos.soustruznik@myflow.cz"])
     sender_name: str = "Klára virtuální asistentka Luboše S."
     sender_email: str = "klara.superzelva@gmail.com"
@@ -46,7 +46,9 @@ def load_config(path: str) -> Config:
     
     notifications = NotificationsConfig(
         telegram=TelegramConfig(**tg_data),
-        email=EmailConfig(**email_data)
+        email=EmailConfig(
+            **{**{"recipients": ["romanxdolezal@seznam.cz"]}, **email_data}
+        )
     )
     
     sources = [SourceConfig(**s) for s in data.get("sources", [])]
