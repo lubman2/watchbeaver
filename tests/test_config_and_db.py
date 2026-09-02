@@ -3,6 +3,7 @@ from pathlib import Path
 import pytest
 from src.config import load_config, Config
 from src.db import Database
+from src.pipeline import web_json_path_for_db
 
 def test_load_config():
     cfg_path = Path(__file__).parent.parent / "config.yaml"
@@ -95,3 +96,9 @@ def test_db_initialization(tmp_path):
     db.mark_match_notified(match_id, channel="telegram")
     db.mark_match_notified(match_id, channel="email")
     assert len(db.get_unnotified_matches()) == 0
+
+
+def test_web_json_path_is_relative_to_repository_database(tmp_path):
+    db_path = tmp_path / "data" / "watchdog.db"
+
+    assert web_json_path_for_db(str(db_path)) == tmp_path / "web" / "public" / "data.json"

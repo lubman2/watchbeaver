@@ -42,6 +42,23 @@ jobs:
         run: |
           python scripts/run_watchdog.py --verbose
 
+      - name: Verify exported web data
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data_path = Path("web/public/data.json")
+          if not data_path.is_file() or data_path.stat().st_size == 0:
+              raise SystemExit(f"Missing or empty export: {data_path}")
+
+          data = json.loads(data_path.read_text(encoding="utf-8"))
+          if not data.get("updated_at"):
+              raise SystemExit("Exported data has no updated_at timestamp")
+
+          print(f"Export verified: updated_at={data['updated_at']}")
+          PY
+
       - name: Commit and push updated web data
         run: |
           git config --global user.name "github-actions[bot]"
