@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 import requests
 from typing import Optional, List
 from src.config import Config
@@ -15,6 +16,13 @@ from src.scrapers.generic_html import GenericHTMLScraper
 from src.scrapers.eia import EIAScraper
 
 logger = logging.getLogger(__name__)
+
+
+def web_json_path_for_db(db_path: str) -> Path:
+    """Return the repository's public JSON path for a data database."""
+    db_file = Path(db_path).resolve()
+    return db_file.parent.parent / "web" / "public" / "data.json"
+
 
 class WatchdogPipeline:
     def __init__(self, config: Config, db: Database, dry_run: bool = False):
@@ -162,7 +170,7 @@ class WatchdogPipeline:
             import datetime
             import sqlite3
             sqlite3.datetime = datetime
-            web_json_path = str(self.config_path.parent / "web" / "public" / "data.json") if hasattr(self, "config_path") else "/Users/lubman/Projects/zelenec-board-watchdog/web/public/data.json"
+            web_json_path = str(web_json_path_for_db(self.db.db_path))
             export_db_to_json(self.db.db_path, web_json_path)
             logger.info(f"Exported web data to {web_json_path}")
         except Exception as e:
