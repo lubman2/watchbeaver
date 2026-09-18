@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-09-17T21:27:29.364978",
+  "updated_at": "2026-09-18T00:20:38.903117",
   "stats": {
     "total_sources": 17,
-    "total_notices": 1101,
+    "total_notices": 1102,
     "total_attachments": 181,
     "total_matches": 4
   },
@@ -14,7 +14,7 @@
       "url": "https://brandysko.cz/vismo/zobraz_dok.asp?p1=1110&id_org=904&ud=1",
       "ofn_url": null,
       "category": "orp",
-      "last_checked_at": "2026-09-17T21:26:12.853047"
+      "last_checked_at": "2026-09-18T00:19:22.274898"
     },
     {
       "id": "ricany_orp",
@@ -23,7 +23,7 @@
       "url": "https://www.ricany.cz/radnice/uredni-deska/",
       "ofn_url": null,
       "category": "orp",
-      "last_checked_at": "2026-09-17T21:26:13.704893"
+      "last_checked_at": "2026-09-18T00:19:23.107559"
     },
     {
       "id": "kusk",
@@ -32,7 +32,7 @@
       "url": "https://stredoceskykraj.cz/web/urad/uredni-deska",
       "ofn_url": null,
       "category": "kraj",
-      "last_checked_at": "2026-09-17T21:26:44.070493"
+      "last_checked_at": "2026-09-18T00:19:53.473453"
     },
     {
       "id": "praha20",
@@ -41,7 +41,7 @@
       "url": "https://www.pocernice.cz/uredni-deska/",
       "ofn_url": null,
       "category": "praha",
-      "last_checked_at": "2026-09-17T21:26:45.717306"
+      "last_checked_at": "2026-09-18T00:19:55.172891"
     },
     {
       "id": "jirny",
@@ -50,7 +50,7 @@
       "url": "https://www.jirny.cz/obecni-urad/uredni-deska/",
       "ofn_url": null,
       "category": "neighbor",
-      "last_checked_at": "2026-09-17T21:26:47.996984"
+      "last_checked_at": "2026-09-18T00:19:57.258716"
     },
     {
       "id": "sestajovice",
@@ -59,7 +59,7 @@
       "url": "https://www.sestajovice.cz/urad/uredni-deska",
       "ofn_url": null,
       "category": "neighbor",
-      "last_checked_at": "2026-09-17T21:27:18.476665"
+      "last_checked_at": "2026-09-18T00:20:27.704914"
     },
     {
       "id": "nehvizdy",
@@ -68,7 +68,7 @@
       "url": "https://www.nehvizdy.cz/urad/uredni-deska/",
       "ofn_url": null,
       "category": "neighbor",
-      "last_checked_at": "2026-09-17T21:27:19.342636"
+      "last_checked_at": "2026-09-18T00:20:28.597772"
     },
     {
       "id": "horousany",
@@ -77,7 +77,7 @@
       "url": "https://www.horousany.cz/seniori/urad/uredni-deska/",
       "ofn_url": null,
       "category": "neighbor",
-      "last_checked_at": "2026-09-17T21:27:20.047819"
+      "last_checked_at": "2026-09-18T00:20:29.302449"
     },
     {
       "id": "radonice",
@@ -86,7 +86,7 @@
       "url": "https://www.radonice.cz/urad-obce/uredni-deska/",
       "ofn_url": null,
       "category": "neighbor",
-      "last_checked_at": "2026-09-17T21:27:20.404285"
+      "last_checked_at": "2026-09-18T00:20:30.070204"
     },
     {
       "id": "svemyslice",
@@ -95,7 +95,7 @@
       "url": "https://www.svemyslice.cz/obec/uredni-deska/",
       "ofn_url": null,
       "category": "neighbor",
-      "last_checked_at": "2026-09-17T21:27:22.222017"
+      "last_checked_at": "2026-09-18T00:20:32.233420"
     },
     {
       "id": "zapy",
@@ -104,7 +104,7 @@
       "url": "https://www.zapy.cz/obecni-urad/uredni-deska/",
       "ofn_url": null,
       "category": "neighbor",
-      "last_checked_at": "2026-09-17T21:27:23.130853"
+      "last_checked_at": "2026-09-18T00:20:33.176311"
     },
     {
       "id": "jenstejn",
@@ -113,7 +113,7 @@
       "url": "https://www.jenstejn.cz/obecni-urad/uredni-deska/",
       "ofn_url": null,
       "category": "neighbor",
-      "last_checked_at": "2026-09-17T21:27:24.545529"
+      "last_checked_at": "2026-09-18T00:20:34.287557"
     },
     {
       "id": "mochov",
@@ -122,7 +122,7 @@
       "url": "https://www.mochov.cz/obecni-urad/uredni-deska-1/?kshow=4",
       "ofn_url": null,
       "category": "neighbor",
-      "last_checked_at": "2026-09-17T21:27:25.547327"
+      "last_checked_at": "2026-09-18T00:20:35.081364"
     },
     {
       "id": "cenia_eia",
@@ -131,7 +131,7 @@
       "url": "https://portal.cenia.cz/eiasea/view/eia100_cr",
       "ofn_url": null,
       "category": "state",
-      "last_checked_at": "2026-09-17T21:27:29.361975"
+      "last_checked_at": "2026-09-18T00:20:38.900204"
     },
     {
       "id": "celakovice",
@@ -140,7 +140,7 @@
       "url": "https://www.celakovice.cz/cs/samosprava/uredni-deska/",
       "ofn_url": null,
       "category": "neighbor",
-      "last_checked_at": "2026-09-17T21:27:26.440411"
+      "last_checked_at": "2026-09-18T00:20:35.926269"
     },
     {
       "id": "lazne_tousen",
@@ -149,7 +149,7 @@
       "url": "https://www.laznetousen.cz/obecni-urad/uredni-deska/",
       "ofn_url": null,
       "category": "neighbor",
-      "last_checked_at": "2026-09-17T21:27:26.997019"
+      "last_checked_at": "2026-09-18T00:20:36.537378"
     },
     {
       "id": "praha14",
@@ -158,7 +158,7 @@
       "url": "https://www.praha14.cz/uredni-deska/",
       "ofn_url": null,
       "category": "praha",
-      "last_checked_at": "2026-09-17T21:27:28.273071"
+      "last_checked_at": "2026-09-18T00:20:37.822600"
     }
   ],
   "matches": [
